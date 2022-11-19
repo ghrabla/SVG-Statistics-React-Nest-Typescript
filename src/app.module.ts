@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ItemsModule } from './items/items.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { AdminsController } from './admins/admins.controller';
 import config from './config/keys';
 
 @Module({
   imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI)],
+  controllers: [AdminsController],
 })
 export class AppModule {}
