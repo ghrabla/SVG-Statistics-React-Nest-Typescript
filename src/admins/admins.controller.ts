@@ -2,14 +2,23 @@ import { Controller,Post,Body, Get } from '@nestjs/common';
 import { CreateAdminDto } from './dto/create-admin.dto';
 import { Admin } from './interfaces/admin.interface';
 import { AdminsService } from './admins.service';
+import * as bcrypt from 'bcrypt';
 
 @Controller('admins')
 export class AdminsController {
    constructor(private readonly adminServices: AdminsService){} 
 
    @Post('register')
-    Register(@Body() createAdminDto: CreateAdminDto ): Promise<Admin>{
-      return this.adminServices.Register(createAdminDto)
+    async Register(@Body() createAdminDto: CreateAdminDto ): Promise<Admin>{
+      const saltOrRounds = 10;
+      const password = createAdminDto.password;
+      const hash = await bcrypt.hash(password, saltOrRounds);
+      const data = {
+          fullname: createAdminDto.fullname,
+          email: createAdminDto.email,
+          password: hash
+      }
+      return this.adminServices.Register(data)
    }
    
    @Get()
@@ -23,7 +32,13 @@ export class AdminsController {
       if(!dbpassword){
         return {message: 'no email such that'}
       }else{
-        return dbpassword; 
+        const password = dbpassword.password;
+        const validepassword = await bcrypt.compare(data.password,password);
+        if(validepassword){
+            return dbpassword;
+        }else{
+            return {message: 'password is not correct'}
+        }
       }
       
    }
