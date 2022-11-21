@@ -7,7 +7,7 @@ import config from './config/keys';
 
 @Module({
   imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI), AdminsModule],   
-  controllers: [AdminsController],  
+  controllers: [],  
   providers: [],
 })
 export class AppModule {}

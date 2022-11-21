@@ -1,4 +1,14 @@
 import { Injectable } from '@nestjs/common';
+import { Admin } from './interfaces/admin.interface';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()
-export class AdminsService {}
+export class AdminsService {
+    constructor(@InjectModel('Admin') private readonly adminModel: Model<Admin>){}
+    
+    async Register(admin: Admin): Promise<Admin>{
+      const newAdmin = new this.adminModel(admin)
+      return await newAdmin.save()
+    }
+}
