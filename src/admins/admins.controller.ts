@@ -16,5 +16,16 @@ export class AdminsController {
    Findall(): Promise<Admin[]>{
        return this.adminServices.Findall()
    }
+
+   @Post('login')
+   async Login(@Body() data){
+      const dbpassword = await this.adminServices.Login(data);
+      if(!dbpassword){
+        return {message: 'no email such that'}
+      }else{
+        return dbpassword; 
+      }
+      
+   }
    
 }

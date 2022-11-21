@@ -15,4 +15,11 @@ export class AdminsService {
     async Findall(): Promise<Admin[]>{
       return await this.adminModel.find()
     }
+
+    async Login(data){
+      const findemail = await this.adminModel.find({email: data.email})
+      return findemail[0]
+    }
+
+
 }
