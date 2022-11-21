@@ -10,7 +10,7 @@ export class AdminsController {
 
    @Post('register')
     async Register(@Body() createAdminDto: CreateAdminDto ): Promise<Admin>{
-      const saltOrRounds = 10;
+      const saltOrRounds = await bcrypt.genSalt();
       const password = createAdminDto.password;
       const hash = await bcrypt.hash(password, saltOrRounds);
       const data = {
