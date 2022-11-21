@@ -1,4 +1,4 @@
-import { Controller,Post,Body } from '@nestjs/common';
+import { Controller,Post,Body, Get } from '@nestjs/common';
 import { CreateAdminDto } from './dto/create-admin.dto';
 import { Admin } from './interfaces/admin.interface';
 import { AdminsService } from './admins.service';
@@ -7,8 +7,14 @@ import { AdminsService } from './admins.service';
 export class AdminsController {
    constructor(private readonly adminServices: AdminsService){} 
 
-   @Post()
+   @Post('register')
     Register(@Body() createAdminDto: CreateAdminDto ): Promise<Admin>{
       return this.adminServices.Register(createAdminDto)
    }
+   
+   @Get()
+   Findall(): Promise<Admin[]>{
+       return this.adminServices.Findall()
+   }
+   
 }

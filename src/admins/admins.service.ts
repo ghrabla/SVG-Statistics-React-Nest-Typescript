@@ -11,4 +11,8 @@ export class AdminsService {
       const newAdmin = new this.adminModel(admin)
       return await newAdmin.save()
     }
+
+    async Findall(): Promise<Admin[]>{
+      return await this.adminModel.find()
+    }
 }
