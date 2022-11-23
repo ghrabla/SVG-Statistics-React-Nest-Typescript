@@ -5,7 +5,7 @@ import { AdminsService } from './admins.service';
 import * as bcrypt from 'bcrypt';
 
 @Controller('admins')
-export class AdminsController {
+export class AdminsController { 
    constructor(private readonly adminServices: AdminsService){} 
 
    @Post('register')
