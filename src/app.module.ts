@@ -4,11 +4,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AdminsModule } from './admins/admins.module';
 import { OrdersModule } from './orders/orders.module';
 import { ClientModule } from './clients/client.module';
+import { CarsController } from './cars/cars.controller';
+import { CarsService } from './cars/cars.service';
 import config from './config/keys';  
 
 @Module({
   imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI), AdminsModule, OrdersModule, ClientModule],   
-  controllers: [],  
-  providers: [],
+  controllers: [CarsController],  
+  providers: [CarsService],
 })
 export class AppModule {}
