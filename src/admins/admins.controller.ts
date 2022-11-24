@@ -9,16 +9,20 @@ export class AdminsController {
    constructor(private readonly adminServices: AdminsService){} 
 
    @Post('register')
-    async Register(@Body() createAdminDto: CreateAdminDto ): Promise<Admin>{
-      const saltOrRounds = await bcrypt.genSalt();
-      const password = createAdminDto.password;
-      const hash = await bcrypt.hash(password, saltOrRounds);
-      const data = {
-          fullname: createAdminDto.fullname,
-          email: createAdminDto.email,
-          password: hash
+    async Register(@Body() createAdminDto: CreateAdminDto ){
+      if(!createAdminDto){
+        return {message: "please enter valid data"}
+      }else{
+        const saltOrRounds = await bcrypt.genSalt();
+        const password = createAdminDto.password;
+        const hash = await bcrypt.hash(password, saltOrRounds);
+        const data = {
+        fullname: createAdminDto.fullname,
+        email: createAdminDto.email,
+        password: hash
+         }
+        return this.adminServices.Register(data)
       }
-      return this.adminServices.Register(data)
    }
    
    @Get()
