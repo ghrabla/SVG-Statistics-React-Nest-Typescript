@@ -6,5 +6,5 @@ export const OrdersSchemas = new mongoose.Schema({
        phone: {type:String,required: true},
        postal: {type:String,required: true},
        id_client:[{type:Schema.Types.ObjectId,required: true,ref:"Client"}],
-       // id_car:[{type:Schema.Types.ObjectId,required: true,ref:"cars"}]
+       id_car:[{type:Schema.Types.ObjectId,required: true,ref:"Cars"}]
 })
