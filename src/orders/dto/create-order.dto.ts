@@ -3,5 +3,5 @@ export class CreateOrderDto{
     readonly city: String;
     readonly postal: String;
     readonly id_client: String; 
-    readonly id_car: String;
+    readonly id_car?: String;
 }

@@ -3,5 +3,5 @@ export interface Order{
    city: String,
    postal: String,
    id_client: String,
-   id_car: String
+   id_car?: String
 }
