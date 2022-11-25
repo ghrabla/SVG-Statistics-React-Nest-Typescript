@@ -6,11 +6,12 @@ import { OrdersModule } from './orders/orders.module';
 import { ClientModule } from './clients/client.module';
 import { CarsController } from './cars/cars.controller';
 import { CarsService } from './cars/cars.service';
+import { CarsModule } from './cars/cars.module';
 import config from './config/keys';  
 
 @Module({
-  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI), AdminsModule, OrdersModule, ClientModule],   
-  controllers: [CarsController],  
-  providers: [CarsService],
+  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI), AdminsModule, OrdersModule, ClientModule , CarsModule],   
+  controllers: [],  
+  providers: [],
 })
 export class AppModule {}

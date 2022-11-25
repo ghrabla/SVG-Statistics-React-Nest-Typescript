@@ -1,8 +1,7 @@
 export interface Cars {
-    id?: number;
-    name: string;
-    img: string;
-    description: string;
-    price: number;
-    qty: number;
+    name: String;
+    img: String;
+    description: String;
+    price: Number;
+    qty: Number;
 }

@@ -6,22 +6,23 @@ import { Cars } from './interfaces/cars.interface';
 export class CarsController {
     constructor(private readonly carsService: CarsService) {}
     @Get()
-    findAll(): Cars[] {
-        return this.carsService.findAll(); ;
+    async findAll(): Promise<Cars[]> {
+        return this.carsService.findAll(); 
     }
     @Get(':id')
-    findOne(@Param('id') id): string {
-        return `car id: ${id}`;
+     findOne(@Param('id') id): Promise<Cars> {
+        return this.carsService.findOne(id);
+
     }
 
     @Post()
-    create(@Body () createCarsDto: CreatCarsDto  ): string {
-        return `Name: ${createCarsDto.name} ,  Price: ${createCarsDto.price} , Description: ${createCarsDto.description} , Image: ${createCarsDto.img} ,Quantity: ${createCarsDto.qty}`;
+     create(@Body() createCarsDto: CreatCarsDto  ): Promise<Cars> {
+        return this.carsService.create(createCarsDto) ;
     }
 
     @Delete(':id')
-    delete(@Param('id') id): string {
-        return `Remove car id: ${id}`;
+    delete(@Param('id') id): Promise<Cars> {
+        return this.carsService.delete(id);
     }
 
     @Put(':id')
