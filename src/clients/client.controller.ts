@@ -9,7 +9,7 @@ export class ClientController {
   constructor(private readonly clientServices: ClientService) { }
 
   @Post('register')
-  async Register(@Body() createAdminDto: CreateClientDto): Promise<any> {
+  async Register(@Body() createAdminDto: CreateClientDto): Promise<Client | {message: String}> {
     if (Object.keys(createAdminDto).length == 0) {
       return { message: "please enter valide data" }
     } else {
