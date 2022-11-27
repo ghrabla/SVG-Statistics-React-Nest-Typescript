@@ -4,7 +4,7 @@ import { Client } from './interfaces/client.interface';
 import { ClientService } from './client.service';
 import * as bcrypt from 'bcrypt';
 
-@Controller('clients')
+@Controller('clients') 
 export class ClientController {
   constructor(private readonly clientServices: ClientService) { }
 
