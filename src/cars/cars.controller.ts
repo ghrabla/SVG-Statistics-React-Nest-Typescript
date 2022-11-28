@@ -9,6 +9,7 @@ export class CarsController {
     async findAll(): Promise<Cars[]> {
         return this.carsService.findAll(); 
     }
+    
     @Get(':id')
      findOne(@Param('id') id): Promise<Cars> {
         return this.carsService.findOne(id);
