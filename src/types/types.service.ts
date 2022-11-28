@@ -8,11 +8,11 @@ export class TypesService {
     constructor(@InjectModel("Types") private readonly typeModel: Model<Type>){}
 
     async findall(): Promise<Type[]>{
-        return await this.typeModel.find();
+        return await this.typeModel.find().populate("id_car").populate("id_detail");
     }
 
     async findone(id): Promise<Type>{
-        return await this.typeModel.findById(id)
+        return await this.typeModel.findById(id).populate("id_car").populate("id_detail");
     }
     
     async create(data): Promise<Type>{
@@ -25,6 +25,6 @@ export class TypesService {
     }
 
     async update(id,data): Promise<Type>{
-        return await this.typeModel.findByIdAndUpdate(id,data)
+        return await this.typeModel.findByIdAndUpdate(id,data);
     }
 }
