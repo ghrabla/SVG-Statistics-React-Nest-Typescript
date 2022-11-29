@@ -3,3 +3,5 @@ export class CreateAdminDto{
     readonly email: String;
     readonly password: String;
 }
+
+
