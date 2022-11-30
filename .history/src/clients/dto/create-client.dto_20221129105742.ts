@@ -1,5 +1,5 @@
 export class CreateClientDto{
     readonly fullname: string;
-    readonly email: string;
-    readonly password: string;
+    readonly email: String;
+    readonly password: String;
 }

@@ -2,7 +2,7 @@ import { Controller,Post,Body, Get } from '@nestjs/common';
 import { CreateAdminDto } from './dto/create-admin.dto';
 import { Admin } from './interfaces/admin.interface';
 import { AdminsService } from './admins.service';
-import * as bcrypt from 'bcrypt';
+// import bcrypt from 'bcrypt'
 
 @Controller('admins')
 export class AdminsController { 
@@ -13,7 +13,7 @@ export class AdminsController {
       if(!createAdminDto){
         return {message: "please enter valid data"}
       }else{
-        const saltOrRounds = await bcrypt.genSalt();
+        // const saltOrRounds = await bcrypt.genSalt();
         const password = createAdminDto.password;
         const hash = await bcrypt.hash(password, saltOrRounds);
         const data = {
@@ -41,7 +41,7 @@ export class AdminsController {
         if(validepassword){
             return dbpassword;
         }else{
-            return {message: 'password is not correct'}  
+            return {message: 'password is not correct'} 
         }
       }
       

@@ -37,7 +37,7 @@ export class AdminsController {
         return {message: 'no email such that'}
       }else{
         const password = dbpassword.password;
-        const validepassword = await bcrypt.compare(data.password,password);
+        const validepassword: = await bcrypt.compare(data.password,password);
         if(validepassword){
             return dbpassword;
         }else{

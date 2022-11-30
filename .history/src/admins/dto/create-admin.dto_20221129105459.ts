@@ -1,5 +1,5 @@
 export class CreateAdminDto{
-    readonly fullname: string;
+    readonly fullname: String;
     readonly email: string;
     readonly password: string;
 }
