@@ -10,8 +10,9 @@ export class ClientController {
 
   @Post('register')
   async Register(@Body() createAdminDto: CreateClientDto): Promise<Client | {message: String}> {
+  
     if (Object.keys(createAdminDto).length == 0) {
-      return { message: "please enter valide data" }
+      return { message: "please enter valide data"}
     } else {
       const saltOrRounds = await bcrypt.genSalt();
       const password = createAdminDto.password;

@@ -19,17 +19,17 @@ export class TypesController {
 
     @Post()
     create(@Body() data:CreateTypeDto): Promise<Type>{
-        return this.types.create(data)
+        return this.types.create(data);
     }
 
     @Delete(":_id")
     delete(@Param() id){
-        return this.types.delete(id)
+        return this.types.delete(id);
     }
     
     @Put(":_id")
     update(@Param() id,@Body() data:CreateTypeDto): Promise<Type>{
-        return this.types.update(id,data)
+        return this.types.update(id,data);
     }
 
 }

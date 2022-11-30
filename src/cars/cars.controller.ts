@@ -13,7 +13,6 @@ export class CarsController {
     @Get(':id')
      findOne(@Param('id') id): Promise<Cars> {
         return this.carsService.findOne(id);
-
     }
 
     @Post()
@@ -27,8 +26,8 @@ export class CarsController {
     }
 
     @Put(':id')
-    update(@Body() updateCarsDto: CreatCarsDto , @Param('id') id): string {
-        return `Update car id: ${id} - Name: ${updateCarsDto.name} ,  Price: ${updateCarsDto.price} , Description: ${updateCarsDto.description} , Image: ${updateCarsDto.img} ,Quantity: ${updateCarsDto.qty}`;
+    update(@Body() updateCarsDto: CreatCarsDto , @Param('id') id): Promise<Cars> {
+        return this.carsService.update(id, updateCarsDto);
     }
 
 }
