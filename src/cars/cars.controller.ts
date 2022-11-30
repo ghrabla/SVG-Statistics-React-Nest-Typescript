@@ -13,7 +13,6 @@ export class CarsController {
     @Get(':id')
      findOne(@Param('id') id): Promise<Cars> {
         return this.carsService.findOne(id);
-
     }
 
     @Post()
