@@ -1,7 +1,9 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
 import NavBar from '../components/NavBar';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 function LoginUser() {
+  const navigate = useNavigate();
   const [formdata,setformdata] = useState({
     email: '',
     password: ''
@@ -27,6 +29,7 @@ function LoginUser() {
     }else{
       let loggedin = JSON.stringify(res.data);
       localStorage.setItem("user",loggedin);
+      navigate('/')
     }
     
   }

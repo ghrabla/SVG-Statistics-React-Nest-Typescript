@@ -2,7 +2,9 @@ import React from 'react'
 import NavBar from '../components/NavBar';
 import {useState} from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 function Register() {
+  const navigate = useNavigate();
   const [formdata,setformdata] = useState({
     fullname : '',
     email: '',
@@ -25,7 +27,7 @@ function Register() {
     const res = await axios.post("http://localhost:9000/clients/register",userData);
     let loggedin = JSON.stringify(res.data);
     localStorage.setItem("user",loggedin);
-    
+    navigate('/')
   }
 
   return (
