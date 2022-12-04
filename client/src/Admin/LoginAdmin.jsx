@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import NavBar from '../components/NavBar';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function LoginAdmin() {
   const navigate = useNavigate()
   const [formdata,setformdata] = useState({
@@ -23,19 +25,24 @@ function LoginAdmin() {
     }
     const res = await axios.post("http://localhost:9000/admins/login",userData);
     if(res.data.message === 'password is not correct'){
-      console.log(0)
+      const notify = () => toast("password is not correct!");
+      notify();
     }else if(res.data.message === 'no email such that'){
-      console.log(-1);
+      const notify = () => toast("no email such that!");
+      notify();
     }else{
       let loggedin = JSON.stringify(res.data);
       localStorage.setItem("admin",loggedin);
       navigate('/dashboard')
+      const notify = () => toast("your login is correct!");
+      notify();
     }
     
   }
   return (
     <>
     <NavBar/>
+    <ToastContainer/>
  <div class="relative flex h-full w-full">
   <div class="h-screen w-full bg-black">
     <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">

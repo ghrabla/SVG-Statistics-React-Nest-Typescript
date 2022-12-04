@@ -19,7 +19,7 @@ function NavBar() {
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="#" class="flex items-center">
         <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-black">N</span>
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"> A M X</span>
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"> A M <i className='text-2xl'>X</i></span>
     </a>
     <button onClick={shownav} data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -50,7 +50,7 @@ function NavBar() {
           </li>
          </>)}
         <li>
-          <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-700  md:border-0  md:p-0 dark:text-gray-400">Products</a>
+          <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-700  md:border-0  md:p-0 dark:text-gray-400"><i class="fas fa-car"></i> Products</a>
         </li>
         <li>
           <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-700  md:border-0  md:p-0 dark:text-gray-400"><i class="fa-solid fa-cart-shopping"></i> Panier</a>

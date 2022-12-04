@@ -7,7 +7,7 @@ function Home() {
         <div>
        <NavBar/>
        
-       <img src="./public/assets/namx_voiture.gif" alt="" className="w-full h-96 object-cover"/>
+       <img src={process.env.PUBLIC_URL+"assets/namx_voiture.gif"} alt="" className="w-full h-full object-cover"/>
        
        </div>
      
