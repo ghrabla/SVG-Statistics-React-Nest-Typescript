@@ -1,7 +1,9 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
 import NavBar from '../components/NavBar';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 function LoginAdmin() {
+  const navigate = useNavigate()
   const [formdata,setformdata] = useState({
     email: '',
     password: ''
@@ -27,6 +29,7 @@ function LoginAdmin() {
     }else{
       let loggedin = JSON.stringify(res.data);
       localStorage.setItem("admin",loggedin);
+      navigate('/dashboard')
     }
     
   }
@@ -37,7 +40,7 @@ function LoginAdmin() {
   <div class="h-screen w-full bg-black">
     <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
       <div>
-        <p class="text-2xl">Login|</p>
+        <p class="text-2xl">Login admin|</p>
       </div>
       <div>
         <fieldset class="border-t border-solid border-gray-600">

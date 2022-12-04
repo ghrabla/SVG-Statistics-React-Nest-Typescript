@@ -49,7 +49,7 @@ const DashboardComponent = () => {
                                         </div>
                                         <div className="mx-5">
                                             <h4 className="text-2xl font-semibold text-gray-700">6389</h4>
-                                            <div className="text-gray-500">Total des Cars </div>
+                                            <div className="text-gray-500">Total Cars </div>
                                         </div>
                                     </div>
                                 </div>
@@ -72,18 +72,7 @@ const DashboardComponent = () => {
                                         </div>
                                         <div className="mx-5">
                                             <h4 className="text-2xl font-semibold text-gray-700">172</h4>
-                                            <div className="text-gray-500">Totale orders </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="w-full mt-6 px-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
-                                    <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
-                                        <div className="p-3 rounded-full bg-pink-600 bg-opacity-75">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M6 2h12c1.1 0 2 .9 2 2v3.32c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V4c0-1.1.9-2 2-2ZM4 10.32v1.56c0 1.08.58 2.08 1.53 2.61l2.96 1.67c.63.35 1.02 1.02 1.02 1.74V20c0 1.1.9 2 2 2h1c1.1 0 2-.9 2-2v-2.1c0-.72.39-1.39 1.02-1.74l2.96-1.67c.94-.53 1.53-1.53 1.53-2.61v-1.56c0-.55-.45-1-1-1H5c-.55 0-1 .44-1 1Z" fill="#FF8A65"></path></svg>
-                                        </div>
-                                        <div className="mx-5">
-                                            <h4 className="text-2xl font-semibold text-gray-700">6389</h4>
-                                            <div className="text-gray-500">Total Details </div>
+                                            <div className="text-gray-500">Total orders </div>
                                         </div>
                                     </div>
                                 </div>

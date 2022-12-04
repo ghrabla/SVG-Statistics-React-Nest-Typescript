@@ -3,7 +3,6 @@ import NavBar from '../components/NavBar';
 import axios from 'axios';
 function LoginUser() {
   const [formdata,setformdata] = useState({
-    
     email: '',
     password: ''
   });
