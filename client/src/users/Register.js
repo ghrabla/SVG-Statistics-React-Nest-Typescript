@@ -4,7 +4,7 @@ function Register () {
     <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
   
   <div class="flex shadow-md">
-    <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+    <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" >
       <div class="w-72">
         <h1 class="text-xl font-semibold">Welcome back</h1>
         <small class="text-gray-400">Welcome back! Please enter your details</small>
@@ -40,16 +40,16 @@ function Register () {
         </div>
       </div>
     </div>
-    <div class="flex flex-wrap content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+    <div class="flex flex-wrap content-center justify-center rounded-r-md" >
       <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://i.imgur.com/9l1A4OS.jpeg"/>
     </div>
 
   </div>
   <div class="mt-3 w-full">
-      <p class="text-center">Made by <a target="_blank" href="https://www.instagram.com/_inubayuaji/" class="text-purple-700">Inu Bayu Aji</a> and ispired by <a target="_blank" href="https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI" class="text-purple-700">this</a>.</p>
+      <p class="text-center">Made by <a href="https://www.instagram.com/_inubayuaji/" class="text-purple-700">Inu Bayu Aji</a> and ispired by <a  href="https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI" class="text-purple-700">this</a>.</p>
   </div>
 </div>
   )
 }
 
-export default Register
+export default Register;

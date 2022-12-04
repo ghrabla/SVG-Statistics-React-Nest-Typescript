@@ -1,79 +1,45 @@
-import React from "react";
-function NavBar () {
-    return (
-<div>
-<nav class="flex justify-around py-4 bg-[#000407]
-backdrop-blur-md shadow-md w-full
-fixed top-0 left-0 right-0 z-10">
-<div class="flex items-center">
+import React,{useState} from 'react';
 
-    <a class="cursor-pointer">
-        <h3 class="text-2xl font-medium text-[#ea2845]">
-            <img class="h-10 object-cover"
-                src="/" alt="" />
-        </h3>
+function NavBar() {
+
+   const [active,setActive] = useState(false);
+
+   const shownav = ()=>{
+       setActive(!active)
+   }
+
+  return(
+      
+<nav class="p-3 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <a href="#" class="flex items-center">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </a>
-</div>
-<div class="items-center hidden space-x-8 lg:flex">
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        Home
-    </a>
-
-    <a class="flex text-[#F5F7F7] 
-        cursor-pointer transition-colors duration-300
-        font-semibold text-[#ea2845]">
-        Themes
-    </a>
-
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        Developers
-    </a>
-
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        Pricing
-    </a>
-
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        Blog
-    </a>
-
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        About Us
-    </a>
-</div>
-<div class="flex items-center space-x-5">
-
-    <a  href="/Register" class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-
-        <svg class="fill-current h-5 w-5 mr-2 mt-0.5"  version="1.1" width="24" height="24"
-            viewBox="0 0 24 24">
-            <path
-                d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
-        </svg>
-
-        Register
-    </a>
-    <a href="/LoginUser" class="flex text-[#F5F7F7] 
-        cursor-pointer transition-colors duration-300
-        font-semibold text-[#ea2845]">
-
-        <svg class="fill-current h-5 w-5 mr-2 mt-0.5"  version="1.1" width="24" height="24"
-            viewBox="0 0 24 24" >
-            <path
-                d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
-        </svg>
-
-        Login
-    </a>
-</div>
+    <button onClick={shownav} data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class={active ? "w-full block md:block md:w-auto" : "hidden lg:block md:block"} id="navbar-solid-bg">
+      <ul class="flex flex-col mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
-</div>
-    )
+
+  )
+  
 }
 export default NavBar;
