@@ -1,55 +1,52 @@
 import React from 'react'
-function Register () {
+import NavBar from '../components/NavBar';
+function Register() {
   return (
-    <div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
-  
-  <div class="flex shadow-md">
-    <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" >
-      <div class="w-72">
-        <h1 class="text-xl font-semibold">Welcome back</h1>
-        <small class="text-gray-400">Welcome back! Please enter your details</small>
-
-        <form class="mt-4">
-          <div class="mb-3">
-            <label class="mb-2 block text-xs font-semibold">Email</label>
-            <input type="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+    
+    <>
+    <NavBar/>
+ <div class="relative flex h-full w-full">
+  <div class="h-screen w-full bg-black">
+    <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
+      <div>
+        <p class="text-2xl">Register|</p>
+      </div>
+      <div>
+        <fieldset class="border-t border-solid border-gray-600">
+          <legend class="mx-auto px-2 text-center text-sm">register via our secure system</legend>
+        </fieldset>
+      </div>
+      <div class="mt-10">
+        <form>
+          <div>
+            <label class="mb-2.5 block font-extrabold" for="fullname">fullname</label>
+            <input type="text" id="fullname" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamal ghrabla" />
           </div>
-
-          <div class="mb-3">
-            <label class="mb-2 block text-xs font-semibold">Password</label>
-            <input type="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+          <div class="mt-4">
+            <label class="mb-2.5 block font-extrabold" for="email">Email</label>
+            <input type="email" id="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamalghrabla@gmail.com" />
           </div>
-
-          <div class="mb-3 flex flex-wrap content-center">
-            <input id="remember" type="checkbox" class="mr-1 checked:bg-purple-700" /> <label for="remember" class="mr-auto text-xs font-semibold">Remember for 30 days</label>
-            <a href="#" class="text-xs font-semibold text-purple-700">Forgot password?</a>
+          <div class="mt-4">
+            <label class="mb-2.5 block font-extrabold" for="email">Password</label>
+            <input type="password" id="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow" />
           </div>
-
-          <div class="mb-3">
-            <button class="mb-1.5 block w-full text-center text-white bg-purple-700 hover:bg-purple-900 px-2 py-1.5 rounded-md">Sign in</button>
-            <button class="flex flex-wrap justify-center w-full border border-gray-300 hover:border-gray-500 px-2 py-1.5 rounded-md">
-              <img class="w-5 mr-2" src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA"/>
-              Sign in with Google
-            </button>
+          <div class="mt-4 flex w-full flex-col justify-between sm:flex-row">
+            <div><input type="checkbox" id="remember" /><label for="remember" class="mx-2 text-sm">Remember me</label></div>
+            
+          </div>
+          <div class="my-10">
+            <button class="w-full rounded bg-green-700 p-2 hover:bg-green-900">Register</button>
           </div>
         </form>
-
-        <div class="text-center">
-          <span class="text-xs text-gray-400 font-semibold">Don't have account?</span>
-          <a href="#" class="text-xs font-semibold text-purple-700">Sign up</a>
-        </div>
       </div>
     </div>
-    <div class="flex flex-wrap content-center justify-center rounded-r-md" >
-      <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://i.imgur.com/9l1A4OS.jpeg"/>
-    </div>
-
   </div>
-  <div class="mt-3 w-full">
-      <p class="text-center">Made by <a href="https://www.instagram.com/_inubayuaji/" class="text-purple-700">Inu Bayu Aji</a> and ispired by <a  href="https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI" class="text-purple-700">this</a>.</p>
+  <div class="h-screen w-1/2 bg-blue-600 lg:block md:block hidden">
+    <img src="https://images.pexels.com/photos/2523959/pexels-photo-2523959.jpeg" class="h-full w-full" />
   </div>
 </div>
-  )
-}
+    </>
 
+  );
+}
 export default Register;

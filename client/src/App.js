@@ -18,7 +18,6 @@ import Register from "./users/Register";
 function App() {
   return (
     <>
-    {/* <Router> */}
       <div className="App">
         <div>
           <Routes>
@@ -26,16 +25,12 @@ function App() {
             <Route path='/order' exact element={<Order />} />
             <Route path="/" element={<Home />} />
             <Route path="/LoginAdmin" element={<LoginAdmin />} />
-            <Route path="/LoginUser" element={<LoginUser />} />
+            <Route path="/Login" element={<LoginUser />} />
             <Route path="/Register" element={<Register />} />
           </Routes>
           <Footer/>
         </div>
       </div>
-    {/* </Router> */}
-   
-    {/* <Routes>
-    </Routes> */}
     </>
   );
 }
