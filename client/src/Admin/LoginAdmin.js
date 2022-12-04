@@ -9,7 +9,7 @@ function LoginAdmin() {
   <div class="h-screen w-full bg-black">
     <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
       <div>
-        <p class="text-2xl">Login|</p>
+        <p class="text-2xl">Login Admin|</p>
       </div>
       <div>
         <fieldset class="border-t border-solid border-gray-600">
