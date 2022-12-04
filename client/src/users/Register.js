@@ -1,8 +1,41 @@
 import React from 'react'
 import NavBar from '../components/NavBar';
+import {useState} from 'react';
+import axios from 'axios';
 function Register() {
+  const [formdata,setformdata] = useState({
+    fullname : '',
+    email: '',
+    password: ''
+  });
+   
+  const {fullname, email, password} = formdata;
+
+  const getclients = async () =>{
+   const res = await axios.get("http://localhost:9000/clients")
+   console.log(res.data)
+  }
+  getclients();
+
+  const onChange = (e) => {
+    setformdata((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }))
+    // console.log(formdata)
+  }
+
+  const register = (e)=>{
+    e.preventDefault()
+    const userData = {
+      fullname,
+      email,
+      password,
+    }
+
+  }
+
   return (
-    
     <>
     <NavBar/>
  <div class="relative flex h-full w-full">
@@ -17,18 +50,18 @@ function Register() {
         </fieldset>
       </div>
       <div class="mt-10">
-        <form>
+        <form onSubmit={register}>
           <div>
             <label class="mb-2.5 block font-extrabold" for="fullname">fullname</label>
-            <input type="text" id="fullname" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamal ghrabla" />
+            <input id="fullname" name='fullname' value={fullname} type="text" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamal ghrabla" onChange={onChange}/>
           </div>
           <div class="mt-4">
             <label class="mb-2.5 block font-extrabold" for="email">Email</label>
-            <input type="email" id="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamalghrabla@gmail.com" />
+            <input id="email" name='email' value={email} type="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamalghrabla@gmail.com" onChange={onChange}/>
           </div>
           <div class="mt-4">
-            <label class="mb-2.5 block font-extrabold" for="email">Password</label>
-            <input type="password" id="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow" />
+            <label class="mb-2.5 block font-extrabold" for="password">Password</label>
+            <input id="password" name='password' value={password} type="password" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow" onChange={onChange}/>
           </div>
           <div class="mt-4 flex w-full flex-col justify-between sm:flex-row">
             <div><input type="checkbox" id="remember" /><label for="remember" class="mx-2 text-sm">Remember me</label></div>
