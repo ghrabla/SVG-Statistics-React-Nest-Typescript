@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar';
 import {useState} from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Register() {
   const navigate = useNavigate();
   const [formdata,setformdata] = useState({
@@ -28,11 +30,14 @@ function Register() {
     let loggedin = JSON.stringify(res.data);
     localStorage.setItem("user",loggedin);
     navigate('/')
+    const notify = () => toast("your register is correct!");
+    notify();
   }
 
   return (
     <>
     <NavBar/>
+    <ToastContainer/>
  <div class="relative flex h-full w-full">
   <div class="h-screen w-full bg-black">
     <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
