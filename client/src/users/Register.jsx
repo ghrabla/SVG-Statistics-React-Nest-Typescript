@@ -8,17 +8,13 @@ function Register() {
     email: '',
     password: ''
   });
-   
   const {fullname, email, password} = formdata;
-
   const onChange = (e) => {
     setformdata((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }))
-    // console.log(formdata)
   }
-
   const register = async (e)=>{
     e.preventDefault()
     const userData = {
@@ -26,7 +22,7 @@ function Register() {
       email,
       password,
     }
-    const res = await axios.post("http://localhost:9000/clients/register",userData)
+    const res = await axios.post("http://localhost:9000/clients/register",userData);
     let loggedin = JSON.stringify(res.data);
     localStorage.setItem("user",loggedin);
     

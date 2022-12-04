@@ -1,8 +1,37 @@
-import React from 'react'
+import React,{useState} from 'react'
 import NavBar from '../components/NavBar';
+import axios from 'axios';
 function LoginUser() {
-  return (
+  const [formdata,setformdata] = useState({
     
+    email: '',
+    password: ''
+  });
+  const { email, password} = formdata;
+  const onChange = (e) => {
+    setformdata((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }))
+  }
+  const Login = async (e)=>{
+    e.preventDefault()
+    const userData = {
+      email,
+      password,
+    }
+    const res = await axios.post("http://localhost:9000/clients/login",userData);
+    if(res.data.message === 'password is not correct'){
+      console.log(0)
+    }else if(res.data.message === 'no email such that'){
+      console.log(-1);
+    }else{
+      let loggedin = JSON.stringify(res.data);
+      localStorage.setItem("user",loggedin);
+    }
+    
+  }
+  return (
     <>
     <NavBar/>
  <div class="relative flex h-full w-full">
@@ -17,14 +46,14 @@ function LoginUser() {
         </fieldset>
       </div>
       <div class="mt-10">
-        <form>
+        <form onSubmit={Login}>
           <div>
             <label class="mb-2.5 block font-extrabold" for="email">Email</label>
-            <input type="email" id="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="mail@user.com" />
+            <input type="email" id="email" name='email' value={email} onChange={onChange} class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="mail@user.com" />
           </div>
           <div class="mt-4">
-            <label class="mb-2.5 block font-extrabold" for="email">Password</label>
-            <input type="password" id="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow" />
+            <label class="mb-2.5 block font-extrabold" for="password">Password</label>
+            <input type="password" id="password" name='password' value={password} onChange={onChange} class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow" />
           </div>
           <div class="mt-4 flex w-full flex-col justify-between sm:flex-row">
             <div><input type="checkbox" id="remember" /><label for="remember" class="mx-2 text-sm">Remember me</label></div>
