@@ -21,9 +21,9 @@ const DashboardComponent = () => {
                         <Link to="/order"  className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
                             <span className="mx-4 font-medium text-gray-800">Orders</span>
                         </Link>
-                        <a href="#" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
+                        <Link to="/types" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
                             <span className="mx-4 font-medium text-gray-800">Types</span>
-                        </a>
+                        </Link>
                         <a href="#" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
                             <span className="mx-4 font-medium text-gray-800">Details</span>
                         </a>
