@@ -46,7 +46,7 @@ function NavBar() {
           <li>
           <Link path="Login" to="/login">
             <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-700  md:border-0  md:p-0 dark:text-gray-400"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
-            </Link>
+          </Link>
           </li>
          </>)}
         <li>

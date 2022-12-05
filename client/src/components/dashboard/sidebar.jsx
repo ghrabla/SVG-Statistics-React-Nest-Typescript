@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const Sidebar = ()=>{
+   const navigate = useNavigate();
    const [active,setActive] = useState(false);
     
    const shownav = () =>{
        setActive(!active)
    }
+
+   const logout = ()=>{
+       localStorage.removeItem("admin")
+       navigate('/')
+   } 
 
     return(
     <>
@@ -29,6 +35,9 @@ const Sidebar = ()=>{
                 </a>
                 <a href="#" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
                     <span className="mx-4 font-medium text-gray-800"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</span>
+                </a>
+                <a href="javascript:void(0)" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={logout}>
+                    <span className="mx-4 font-medium text-gray-800"><i className="fa-solid fa-right-from-bracket"></i> Logout</span>
                 </a>
             </nav>
         </div>
