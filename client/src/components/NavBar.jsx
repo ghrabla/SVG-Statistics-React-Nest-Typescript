@@ -15,8 +15,8 @@ function NavBar() {
 
   return(
       
-<nav className="fixed w-full border-gray-200 bg-[#193d3d] dark:border-gray-700 ">
-  <div class="bg-[#193d3d]  flex flex-wrap items-center justify-between mx-auto ">
+<nav className="fixed w-full border-gray-200 bg-[#193d3d] dark:border-gray-700">
+  <div class="bg-[#193d3d]  flex flex-wrap items-center justify-between sm:mx-auto lg:mx-5 md:mx-5">
     <a href="#" class="flex items-center">
         <span class="self-center text-4xl font-semibold whitespace-nowrap text-black">N</span>
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white"> A M <i className='text-2xl'>X</i></span>

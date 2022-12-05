@@ -1,4 +1,4 @@
-
+import { ToastContainer } from 'react-toastify';
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -28,6 +28,7 @@ function App() {
             <Route path="/Login" element={<LoginUser />} />
             <Route path="/Register" element={<Register />} />
           </Routes>
+          <ToastContainer/>
           <Footer/>
         </div>
       </div>
