@@ -20,28 +20,18 @@ fixed top-0 left-0 right-0 z-10">
         Home
     </a>
 
-    <a class="flex text-[#F5F7F7] 
+    <a href="/" class="flex text-[#F5F7F7] 
         cursor-pointer transition-colors duration-300
         font-semibold text-[#ea2845]">
         Themes
     </a>
 
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        Developers
-    </a>
-
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
-        cursor-pointer transition-colors duration-300">
-        Pricing
-    </a>
-
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
+    <a  href="/" class="flex text-[#F5F7F7] hover:text-[#ea2845]
         cursor-pointer transition-colors duration-300">
         Blog
     </a>
 
-    <a class="flex text-[#F5F7F7] hover:text-[#ea2845]
+    <a href="/" class="flex text-[#F5F7F7] hover:text-[#ea2845]
         cursor-pointer transition-colors duration-300">
         About Us
     </a>
