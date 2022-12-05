@@ -8,14 +8,14 @@ export class DetailsService {
     constructor(@InjectModel("Details") private readonly detailsModel: Model<Detail>){}
 
     async findall(): Promise<Detail[]>{
-        return await this.detailsModel.find();
+        return await this.detailsModel.find(); 
     }
 
     async create(data): Promise<Detail>{
         return await this.detailsModel.create(data);
     }
 
-    async findone(id): Promise<Detail>{
+    async findone(id: string): Promise<Detail>{
         return await this.detailsModel.findById({_id: id})
     }
 
@@ -24,7 +24,7 @@ export class DetailsService {
         return {message: "deleted succesfully"}
     }
 
-    async update(id,data): Promise<Detail>{
+    async update(id: string,data): Promise<Detail>{
         return this.detailsModel.findByIdAndUpdate(id,data)
     }
 }
