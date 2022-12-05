@@ -26,23 +26,28 @@ function Register() {
       email,
       password,
     }
-    const res = await axios.post("http://localhost:9000/clients/register",userData);
-    let loggedin = JSON.stringify(res.data);
-    localStorage.setItem("user",loggedin);
-    navigate('/')
-    const notify = () => toast("your register is correct!");
-    notify();
+    if(userData.fullname =='' || userData.email =='' || userData.password ==''){
+      const notify = () => toast("please fill al the feilds!");
+      notify();
+    }else{
+      const res = await axios.post("http://localhost:9000/clients/register",userData);
+      let loggedin = JSON.stringify(res.data);
+      localStorage.setItem("user",loggedin);
+      navigate('/')
+      const notify = () => toast("your register is correct!");
+      notify();
+    }
   }
 
   return (
     <>
     <NavBar/>
     <ToastContainer/>
- <div class="relative flex h-full w-full">
-  <div class="h-screen w-full bg-black">
+ <div class="flex w-full">
+  <div class="w-full bg-black lg:mt-16 sm:mt-12 md:mt-12">
     <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
       <div>
-        <p class="text-2xl">Register|</p>
+        <p class="text-2xl mt-12">Register|</p>
       </div>
       <div>
         <fieldset class="border-t border-solid border-gray-600">
@@ -74,7 +79,7 @@ function Register() {
       </div>
     </div>
   </div>
-  <div class="h-screen w-1/2 bg-blue-600 lg:block md:block hidden">
+  <div class="h-screen w-1/2 bg-blue-600 lg:block md:block hidden mt-5">
     <img src="https://images.pexels.com/photos/2523959/pexels-photo-2523959.jpeg" class="h-full w-full" />
   </div>
 </div>
