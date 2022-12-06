@@ -79,8 +79,8 @@ function Register() {
       </div>
     </div>
   </div>
-  <div class="h-screen w-1/2 bg-blue-600 lg:block md:block hidden mt-5">
-    <img src="https://images.pexels.com/photos/2523959/pexels-photo-2523959.jpeg" class="h-full w-full" />
+  <div class="h-screen w-1/2 bg-blue-600 lg:block md:block hidden mt-16">
+    <img src="https://images.pexels.com/photos/2523959/pexels-photo-2523959.jpeg" class="h-full w-full mt-2" />
   </div>
 </div>
     </>
