@@ -43,11 +43,11 @@ function LoginAdmin() {
     <>
     <NavBar/>
     <ToastContainer/>
- <div class="relative flex h-full w-full">
-  <div class="h-screen w-full bg-black">
+ <div class="flex w-full">
+  <div class="w-full bg-black lg:mt-16 sm:mt-auto md:mt-auto">
     <div class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
       <div>
-        <p class="text-2xl">Login admin|</p>
+        <p class="text-2xl mt-5">Login admin|</p>
       </div>
       <div>
         <fieldset class="border-t border-solid border-gray-600">
@@ -77,7 +77,7 @@ function LoginAdmin() {
       </div>
     </div>
   </div>
-  <div class="h-screen w-1/2 bg-blue-600 md:block lg:block hidden">
+  <div class="h-screen w-1/2 bg-blue-600 md:block lg:block hidden mt-5">
     <img src="https://images.pexels.com/photos/2523959/pexels-photo-2523959.jpeg" class="h-full w-full" />
   </div>
 </div>

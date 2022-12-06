@@ -63,7 +63,7 @@ return (
         <div class="text-sm text-gray-100 font-semibold py-1">
           Copyright © <span id="get-current-year">2022</span>
           <a href="/" class="text-blueGray-500 hover:text-[]" > Notus JS by </a>
-          <a href="https://github.com/ghrabla" class="text-blueGray-500 hover:text-green-800">kamal Rhrabla</a>.
+          <a href="https://github.com/ghrabla" class="text-blueGray-500 hover:text-green-800">Homeland Crawlers</a>.
         </div>
       </div>
     </div>
