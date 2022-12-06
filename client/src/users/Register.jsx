@@ -58,11 +58,11 @@ function Register() {
         <form onSubmit={register}>
           <div>
             <label class="mb-2.5 block font-extrabold" for="fullname">fullname</label>
-            <input id="fullname" name='fullname' value={fullname} type="text" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamal ghrabla" onChange={onChange}/>
+            <input id="fullname" name='fullname' value={fullname} type="text" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"  onChange={onChange}/>
           </div>
           <div class="mt-4">
             <label class="mb-2.5 block font-extrabold" for="email">Email</label>
-            <input id="email" name='email' value={email} type="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30" placeholder="kamalghrabla@gmail.com" onChange={onChange}/>
+            <input id="email" name='email' value={email} type="email" class="inline-block w-full rounded bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"  onChange={onChange}/>
           </div>
           <div class="mt-4">
             <label class="mb-2.5 block font-extrabold" for="password">Password</label>
