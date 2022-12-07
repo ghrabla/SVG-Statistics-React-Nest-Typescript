@@ -1,18 +1,19 @@
 import React from 'react'
+import Imgslide from '../Slide'
+import { useState } from 'react'
+ 
 
 export default function About() {
   return (
     <div>
         
-        <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div  class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
             <div class="flex flex-col lg:flex-row justify-between gap-8">
                 <div class="w-full lg:w-5/12 flex flex-col justify-center">
                     <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">About Us</h1>
                     <p class="font-normal text-base leading-6 text-gray-600">Le HUV présente la particularité de proposer des réservoirs à hydrogène interchangeables. Six réservoirs d'hydrogène interchangeables s'ajoutent au réservoir principal et permettent de bénéficier d'une autonomie de 800 kilomètres. Ce système permet d'échanger facilement les six réservoirs amovibles dans une station sans faire le « plein » du réservoir principal, les stations-service pour l'hydrogène étant peu répandues</p>
                 </div>
-                <div class="w-full lg:w-8/12">
-                    <img class="w-full h-full rounded-lg" src={process.env.PUBLIC_URL+"assets/NAMX-01.jpg"} alt=""  />
-                </div>
+                <Imgslide />
             </div>
     
             <div class="flex lg:flex-row flex-col justify-between gap-8 pt-12">
@@ -38,6 +39,7 @@ export default function About() {
                 </div>
             </div>
         </div>
+
     
     </div>
   )
