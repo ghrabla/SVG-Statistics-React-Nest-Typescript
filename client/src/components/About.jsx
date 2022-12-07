@@ -11,7 +11,7 @@ export default function About() {
                     <p class="font-normal text-base leading-6 text-gray-600">Le HUV présente la particularité de proposer des réservoirs à hydrogène interchangeables. Six réservoirs d'hydrogène interchangeables s'ajoutent au réservoir principal et permettent de bénéficier d'une autonomie de 800 kilomètres. Ce système permet d'échanger facilement les six réservoirs amovibles dans une station sans faire le « plein » du réservoir principal, les stations-service pour l'hydrogène étant peu répandues</p>
                 </div>
                 <div class="w-full lg:w-8/12">
-                    <img class="w-full h-full rounded-lg" src={process.env.PUBLIC_URL+"assets/car1.jpg"} alt=""  />
+                    <img class="w-full h-full rounded-lg" src={process.env.PUBLIC_URL+"assets/NAMX-01.jpg"} alt=""  />
                 </div>
             </div>
     
