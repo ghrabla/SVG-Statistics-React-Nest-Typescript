@@ -8,7 +8,7 @@ function Home() {
     return (
         <div>
         <div>
-       <NavBar/>
+       <NavBar />
        </div>
        {/* <img src={process.env.PUBLIC_URL+"https://pininfarina.it/wp-content/uploads/2022/05/NAMX_video_site.mp4"} alt="" className="w-full h-full object-cover"/> */}
        <video autoPlay loop muted id="video">
