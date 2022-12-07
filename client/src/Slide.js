@@ -21,7 +21,7 @@ function Imgslide(){
     const timerId = setInterval(() => {
       // Use a functional state update to correctly increment the count
       setCount(count => count + 1);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(timerId);
   }, []);
@@ -31,7 +31,7 @@ function Imgslide(){
   const image = imageArray[count % imageArray.length];
 
     return (
-        <div class="w-full lg:w-8/12" className="imageSlide">
+        <div class="lg:w-8/12" className="imageSlide">
             <img name="slide"  class="w-full h-full rounded-lg"  src={image}/>
         </div>
     );
