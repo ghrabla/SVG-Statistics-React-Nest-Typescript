@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidebar from "./sidebar";
 import Statistics from "./statistics";
-
+import { StatisticsContext } from "../../App"; 
 
 
 const DashboardComponent = () => {
+    const { cars,setcars} = useContext(StatisticsContext);
     return (
-
         <div className="flex bg-gray-100">
             <Sidebar/>
             <div className="flex flex-col w-full mb-3 ">
