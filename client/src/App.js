@@ -46,11 +46,11 @@ function App() {
       <StatisticsContext.Provider value={{cars,setcars,orders,setorders,types,settypes}}>
         <div>
           <Routes>
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/order' exact element={<Order />} />
+            <Route path='/cars' element={<Dashboard />} />
+            <Route path='/orders' exact element={<Order />} />
             <Route path='/types' exact element={<Types />} />
             <Route path="/" element={<Home />} />
-            <Route path="/LoginAdmin" element={<LoginAdmin />} />
+            <Route path="/admin/Login" element={<LoginAdmin />} />
             <Route path="/Login" element={<LoginUser />} />
             <Route path="/Register" element={<Register />} />
           </Routes>

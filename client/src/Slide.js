@@ -31,7 +31,7 @@ function Imgslide(){
   const image = imageArray[count % imageArray.length];
 
     return (
-        <div class="lg:w-8/12" className="imageSlide">
+        <div  className="lg:w-1/2 md:w-full sm:w-full">
             <img name="slide"  class="w-full h-full rounded-lg"  src={image}/>
         </div>
     );
