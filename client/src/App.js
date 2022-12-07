@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './components/dashboard/dashboardComponent';
 import Order from './components/dashboard/OrderComponent';
 import Types from './components/dashboard/TypesComponent';
-// import './App.css';
 import Home from "./pages/Home";
 import LoginAdmin from "./Admin/LoginAdmin";
 import LoginUser from "./users/LoginUser";
@@ -49,9 +48,7 @@ function App() {
           <Routes>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/order' exact element={<Order />} />
-
             <Route path='/types' exact element={<Types />} />
-
             <Route path="/" element={<Home />} />
             <Route path="/LoginAdmin" element={<LoginAdmin />} />
             <Route path="/Login" element={<LoginUser />} />
