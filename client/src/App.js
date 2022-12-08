@@ -5,6 +5,7 @@ import {  Route, Routes , } from 'react-router-dom';
 import Footer from '../src/components/Footer';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './components/dashboard/dashboardComponent';
+import Cars from './components/dashboard/CarsComponent';
 import Order from './components/dashboard/OrderComponent';
 import Types from './components/dashboard/TypesComponent';
 import Home from "./pages/Home";
@@ -23,7 +24,8 @@ function App() {
       <div className="App">
         <div>
           <Routes>
-            <Route path='/cars' element={<Dashboard />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/cars' element={<Cars />} />
             <Route path='/orders' exact element={<Order />} />
             <Route path='/types' exact element={<Types />} />
             <Route path="/" element={<Home />} />
