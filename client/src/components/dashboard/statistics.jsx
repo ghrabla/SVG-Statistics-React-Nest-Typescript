@@ -1,14 +1,35 @@
 import { Bag } from 'iconic-react';
-import { StatisticsContext } from "../../App"; 
-import { useContext } from 'react';
-
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 const Statistics = ()=>{
-    const { cars,setcars,types,settypes,orders,setorders} = useContext(StatisticsContext);
+
+    const [cars,setcars] = useState([])
+    const [orders,setorders] = useState([])
+    const [types,settypes] = useState([])
+     
+    useEffect(()=>{
+    
+    const getcars = async ()=>{
+     const res = await axios.get("http://localhost:9000/cars")
+     setcars(res.data)
+    }
+    const gettypes = async ()=>{
+     const res = await axios.get("http://localhost:9000/types")
+     settypes(res.data)
+    }
+    const getorders = async ()=>{
+     const res = await axios.get("http://localhost:9000/orders")
+     setorders(res.data)
+    }
+    getcars();
+    gettypes();
+    getorders();
+    },[])
+
     return(
         <div className="container mx-auto px-6 py-8">
-        
         <div className="mt-4">
-            <div className="flex flex-wrap -mx-6">
+            <div className="flex flex-wrap mx-6">
                 <div className="w-full px-6 sm:w-1/2 xl:w-1/3">
                     <div className="flex items-center px-5 py-6 shadow-sm rounded-md bg-white">
                         <div className="p-3 rounded-full bg-indigo-600 bg-opacity-75">
@@ -16,7 +37,7 @@ const Statistics = ()=>{
                         </div>
                         <div className="mx-5">
                             <h4 className="text-2xl font-semibold text-gray-700">{cars.length}</h4>
-                            <div className="text-gray-500">Total Cars </div>
+                            <div className="text-gray-500">Total Cars</div>
                         </div>
                     </div>
                 </div>

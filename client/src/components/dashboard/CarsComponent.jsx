@@ -1,16 +1,16 @@
-import React from "react";
-import Sidebar from "./sidebar";
-import Statistics from "./statistics";
+import React from 'react'
+import Sidebar from './sidebar'
+import Statistics from './statistics'
 
-
-const OrderComponent = () => {
-    return (
-    <div className="flex bg-gray-100">
+export default function CarsComponent() {
+  return (
+    <div>
+       <div className="flex bg-gray-100">
          <Sidebar/>
         <div class="bg-gray-100 p-8 rounded-md w-full">
             <div class=" flex items-center justify-between pb-6">
                 <div>
-                    <h2 class="text-gray-600 font-semibold">Orders dashboard</h2>
+                    <h2 class="text-gray-600 font-semibold">Cars dashboard</h2>
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="flex bg-gray-50 items-center p-2 rounded-md">
@@ -29,7 +29,7 @@ const OrderComponent = () => {
                 </div>
             </div>
             <div>
-                <Statistics/>
+            <Statistics/>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                     <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
                         <table class="min-w-full leading-normal">
@@ -41,19 +41,15 @@ const OrderComponent = () => {
                                     </th>
                                     <th
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Adress 
+                                        Brand
                                     </th>
                                     <th
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        City
+                                        Price
                                     </th>
                                     <th
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Phone
-                                    </th>
-                                    <th
-                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Code postal
+                                        Color
                                     </th>
                                     <th
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -84,11 +80,6 @@ const OrderComponent = () => {
                                         </p>
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">
-                                            46000
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div class="flex items-center space-x-4 text-sm">
                                             <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-edit mt-1"></i>  Edit</button>
                                             <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-trash mt-1"></i>  Delete</button>
@@ -103,7 +94,6 @@ const OrderComponent = () => {
             </div>
         </div>
     </div>
-    );
+    </div>
+  )
 }
-
-export default OrderComponent;
