@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import LoginAdmin from "./Admin/LoginAdmin";
 import LoginUser from "./users/LoginUser";
 import Register from "./users/Register";
+import Details from "./pages/details";
 
 
 
@@ -32,6 +33,8 @@ function App() {
             <Route path="/admin/Login" element={<LoginAdmin />} />
             <Route path="/Login" element={<LoginUser />} />
             <Route path="/Register" element={<Register />} />
+            {/* <Route path="/details/:id" element={<Details />} /> */}
+            <Route path="/details" element={<Details />} />
           </Routes>
           <ToastContainer/>
           <Footer/>
