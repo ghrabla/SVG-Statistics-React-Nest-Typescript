@@ -33,7 +33,7 @@ function LoginAdmin() {
     }else{
       let loggedin = JSON.stringify(res.data);
       localStorage.setItem("admin",loggedin);
-      navigate('/dashboard')
+      navigate('/cars')
       const notify = () => toast("your login is correct!");
       notify();
     }

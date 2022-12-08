@@ -1,9 +1,30 @@
 import { Bag } from 'iconic-react';
-import { useContext } from 'react';
-import { StatisticsContext } from '../../App';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 const Statistics = ()=>{
+
+    const [cars,setcars] = useState([])
+    const [orders,setorders] = useState([])
+    const [types,settypes] = useState([])
+     
+    useEffect(()=>{
     
-    const { cars,setcars,orders,setorders,types,settypes} = useContext(StatisticsContext);
+    const getcars = async ()=>{
+     const res = await axios.get("http://localhost:9000/cars")
+     setcars(res.data)
+    }
+    const gettypes = async ()=>{
+     const res = await axios.get("http://localhost:9000/types")
+     settypes(res.data)
+    }
+    const getorders = async ()=>{
+     const res = await axios.get("http://localhost:9000/orders")
+     setorders(res.data)
+    }
+    getcars();
+    gettypes();
+    getorders();
+    },[])
 
     return(
         <div className="container mx-auto px-6 py-8">

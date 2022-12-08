@@ -1,36 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import Sidebar from "./sidebar";
+import Statistics from "./statistics";
 
 
 const OrderComponent = () => {
     return (
-    <div className="flex h-screen bg-gray-100">
-          <div className="flex flex-col flex-shrink-0 w-64">
-                <div className="flex flex-col flex-grow overflow-y-auto bg-white">
-                    <div className="flex items-center flex-shrink-0 px-4 py-2 bg-gray-800">
-                        <span className="text-lg font-semibold text-white">Order</span>
-                    </div>
-                    <nav className="flex flex-col flex-grow mt-5 overflow-y-auto">
-                        <Link to="/" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 bg-gray-200">
-                            <span className="mx-4 font-medium text-gray-800">Cars</span>
-                        </Link>
-                        <Link to="/order"  className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
-                            <span className="mx-4 font-medium text-gray-800">Orders</span>
-                        </Link>
-                        <Link to="/types" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
-                            <span className="mx-4 font-medium text-gray-800">Types</span>
-                        </Link>
-                        <a href="#" className="flex items-center flex-shrink-0 px-4 py-2 text-gray-800 hover:bg-gray-200">
-                            <span className="mx-4 font-medium text-gray-800">Details</span>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-        <div class="bg-white p-8 rounded-md w-full">
+    <div className="flex bg-gray-100">
+         <Sidebar/>
+        <div class="bg-gray-100 p-8 rounded-md w-full">
             <div class=" flex items-center justify-between pb-6">
                 <div>
-                    <h2 class="text-gray-600 font-semibold">Products Oder</h2>
+                    <h2 class="text-gray-600 font-semibold">Orders dashboard</h2>
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="flex bg-gray-50 items-center p-2 rounded-md">
@@ -44,11 +24,12 @@ const OrderComponent = () => {
                     </div>
                     <div class="lg:ml-40 ml-10 space-x-8">
                         {/* <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New Report</button> */}
-                        <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
+                        <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer"><i class="fas fa-plus mt-1"></i> Create</button>
                     </div>
                 </div>
             </div>
             <div>
+                <Statistics/>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                     <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
                         <table class="min-w-full leading-normal">
@@ -109,107 +90,8 @@ const OrderComponent = () => {
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div class="flex items-center space-x-4 text-sm">
-                                            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Edit</button>
-                                            <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">      
-                                            <div class="ml-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
-                                                    Vera Carpenter
-                                                </p>
-                                            </div>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">youcode  </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Casablanca
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            0666666666
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">
-                                            46000
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center space-x-4 text-sm">
-                                            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Edit</button>
-                                            <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">      
-                                            <div class="ml-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
-                                                    Vera Carpenter
-                                                </p>
-                                            </div>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">youcode  </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Casablanca
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            0666666666
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">
-                                            46000
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center space-x-4 text-sm">
-                                            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Edit</button>
-                                            <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">      
-                                            <div class="ml-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
-                                                    Vera Carpenter
-                                                </p>
-                                            </div>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">youcode  </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Casablanca
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            0666666666
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">
-                                            46000
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center space-x-4 text-sm">
-                                            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Edit</button>
-                                            <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Delete</button>
+                                            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-edit mt-1"></i>  Edit</button>
+                                            <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-trash mt-1"></i>  Delete</button>
                                         </div>
                                     </td>
                                 </tr>
