@@ -17,7 +17,7 @@ export class CarsController {
 
     @Post()
      create(@Body() createCarsDto: CreatCarsDto  ): Promise<Cars> {
-        return this.carsService.create(createCarsDto) ;
+        return this.carsService.create(createCarsDto);
     }
 
     @Delete(':id')
