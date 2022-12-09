@@ -20,7 +20,7 @@ const Sidebar = ()=>{
     
     <div className={active ? "flex flex-col flex-shrink-0 w-64" : "hidden"}>
         <div className="flex flex-col flex-grow overflow-y-auto bg-white">
-            <div className="flex items-center flex-shrink-0 px-4 py-2 bg-gray-800">
+            <div className="flex items-center flex-shrink-0 px-4 py-2 bg-blue-800">
                 <span className="text-lg font-semibold text-white">Dashboard</span>
             </div>
             <nav className="flex flex-col flex-grow mt-5 overflow-y-auto">
@@ -48,7 +48,7 @@ const Sidebar = ()=>{
             </nav>
         </div>
     </div>
-    <a href="javascript:void(0)" onClick={shownav} className="font-bold text-white bg-black flex p-3 h-14 mt-10 rounded text-2xl"><i class="fas fa-bars"></i></a>
+    <a href="javascript:void(0)" onClick={shownav} className="font-bold text-white bg-blue-700 flex p-3 h-14 mt-10 rounded text-2xl"><i class="fas fa-bars"></i></a>
     </>
     )
 }
