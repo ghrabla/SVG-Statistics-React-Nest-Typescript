@@ -1,7 +1,7 @@
 import { Bag } from 'iconic-react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-const Statistics = ()=>{
+const Statistics = ({allcars,setallcars})=>{
 
     const [cars,setcars] = useState([])
     const [orders,setorders] = useState([])
@@ -12,6 +12,7 @@ const Statistics = ()=>{
     const getcars = async ()=>{
      const res = await axios.get("http://localhost:9000/cars")
      setcars(res.data)
+     setallcars(res.data)
     }
     const gettypes = async ()=>{
      const res = await axios.get("http://localhost:9000/types")
