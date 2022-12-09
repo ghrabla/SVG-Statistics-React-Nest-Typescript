@@ -24,16 +24,16 @@ return (
             <span class="block uppercase text-gray-100 text-sm font-semibold mb-2">Useful Links</span>
             <ul class="list-unstyled">
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">About Us</a>
               </li>
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">Blog</a>
               </li>
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">Github</a>
               </li>
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free Products</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">Free Products</a>
               </li>
             </ul>
           </div>
@@ -44,13 +44,13 @@ return (
                 <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">MIT License</a>
               </li>
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms Conditions</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">Terms Conditions</a>
               </li>
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">Privacy Policy</a>
               </li>
               <li>
-                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                <a class="text-black hover:text-green-800 font-semibold block pb-2 text-sm" href="/">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ return (
         <div class="text-sm text-gray-100 font-semibold py-1">
           Copyright © <span id="get-current-year">2022</span>
           <a href="/" class="text-blueGray-500 hover:text-[]" > Notus JS by </a>
-          <a href="https://github.com/ghrabla" class="text-blueGray-500 hover:text-green-800">Homeland Crawlers</a>.
+          <a href="https://github.com/ghrabla/SVG-Statistics-React-Nest-Typescript.git" class="text-blueGray-500 hover:text-green-800">Homeland Crawlers</a>.
         </div>
       </div>
     </div>
