@@ -1,5 +1,6 @@
 import { Bag } from 'iconic-react';
 import axios from 'axios';
+import { getcars,gettypes,getorders } from '../../methods/method';
 import React, { useEffect, useState } from 'react';
 const Statistics = ({allcars,setallcars})=>{
 
@@ -8,23 +9,18 @@ const Statistics = ({allcars,setallcars})=>{
     const [types,settypes] = useState([])
      
     useEffect(()=>{
-    
-    const getcars = async ()=>{
-     const res = await axios.get("http://localhost:9000/cars")
-     setcars(res.data)
-     setallcars(res.data)
-    }
-    const gettypes = async ()=>{
-     const res = await axios.get("http://localhost:9000/types")
-     settypes(res.data)
-    }
-    const getorders = async ()=>{
-     const res = await axios.get("http://localhost:9000/orders")
-     setorders(res.data)
-    }
-    getcars();
-    gettypes();
-    getorders();
+        Promise.resolve(getcars()).then((res)=>{
+            console.log(res)
+            setcars(res)
+            setallcars(res)
+        })
+        // console.log(getcars()) 
+        // const necars = 
+    // setallcars(getcars());
+    // setcars( getcars());
+    // setorders( getorders);
+    // settypes( gettypes);
+  
     },[])
 
     return(
