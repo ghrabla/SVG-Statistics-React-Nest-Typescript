@@ -8,12 +8,26 @@ import Swal from 'sweetalert2';
 const DashboardComponent = () => {
     const [allcars,setallcars] = useState([])
 
-    const deletecar = async (id)=>{
-      await axios.delete(`http://localhost:9000/cars/${id}`)
+    const deletecar = (_id)=>{
+        Swal.fire({
+            title: "Are you sure ?",
+            text: "You are going to delete this user",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "black",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes",
+            cancelButtonText: "Cancel",
+          }).then((result) => {
+            if (result.value) { 
+            axios.delete(`http://localhost:9000/cars/${_id}`).then(()=>{
+            setallcars(allcars.filter((car)=>{
+              return car._id !== _id;
+          }))
+      })
          Swal.fire("Deleted !", "success")
-         setallcars(allcars.pop())
-         console.log(allcars)
-        
+        }
+    });    
     }
     return (
     <div className="flex bg-gray-100">
@@ -92,7 +106,7 @@ const DashboardComponent = () => {
                                         </p>
                                     </td>
                                     <td class="px-5 py-4 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
+                                        <p class="text-gray-900 whitespace-no-wrap" >
                                             {one.color}
                                         </p>
                                     </td>
