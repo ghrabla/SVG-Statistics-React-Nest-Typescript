@@ -5,3 +5,7 @@ export interface Order{
    id_client: String,
    id_car?: String
 }
+
+export interface Message{
+   message: String
+}

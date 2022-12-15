@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./sidebar";
 import Statistics from "./statistics";
 import Swal from 'sweetalert2';
-
+import { getcars } from "../../methods/method";
 
 const DashboardComponent = () => {
     const [allcars,setallcars] = useState([])
@@ -24,6 +24,7 @@ const DashboardComponent = () => {
             setallcars(allcars.filter((car)=>{
               return car._id !== _id;
           }))
+          getcars();
       })
          Swal.fire("Deleted !", "success")
         }
