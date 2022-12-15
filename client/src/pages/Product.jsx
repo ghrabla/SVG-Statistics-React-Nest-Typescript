@@ -1,7 +1,18 @@
 import React ,{ useEffect, useState } from "react";
 import NavBar from '../components/NavBar';
-export default function IndexPage() {
-  const [product,setproduct] = useState([])
+import axios from "axios";
+const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+
+export default function App() {
+    const [product,setproduct] = useState([])
+
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+    });
+  }, []);
+
+  if (!post) return null;
 
     return (
         <>
@@ -15,7 +26,7 @@ export default function IndexPage() {
                         {/* Card 1 */}
                         <div className="mx-2 w-72 lg:mb-0 mb-8">
                             <div>
-                                <img src="https://cdn.tuk.dev/assets/templates/classified/Bitmap (1).png" className="w-full h-44" />
+                                <img src="'http://localhost/fill-rouge/backend/images/' + index.image" className="w-full h-44" />
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
