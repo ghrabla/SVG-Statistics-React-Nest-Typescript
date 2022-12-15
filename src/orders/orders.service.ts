@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Order } from './interfaces/order.interface';
+import { Order,Message } from './interfaces/order.interface';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 @Injectable()
@@ -18,7 +18,7 @@ export class OrdersService {
         return await this.oderModel.create(order)
     }
 
-    async remove(_id: String): Promise<{message: String}>{
+    async remove(_id: String): Promise<Message>{
         await this.oderModel.findByIdAndRemove(_id)
         return {message: "deleted succesfully"}
     }

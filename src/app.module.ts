@@ -5,12 +5,12 @@ import { AdminsModule } from './admins/admins.module';
 import { OrdersModule } from './orders/orders.module';
 import { ClientModule } from './clients/client.module';
 import { CarsModule } from './cars/cars.module';
-import { DetailsModule } from './details/details.module';
-import { TypesModule } from './types/types.module';
+// import { DetailsModule } from './details/details.module';
+// import { TypesModule } from './types/types.module';
 import config from './config/keys';  
 
 @Module({
-  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI),AdminsModule, OrdersModule, ClientModule , CarsModule, DetailsModule, TypesModule],   
+  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI),AdminsModule, OrdersModule, ClientModule , CarsModule, ],   
   controllers: [],  
   providers: [],
 })
