@@ -9,6 +9,7 @@ import Cars from './components/dashboard/CarsComponent';
 import Order from './components/dashboard/OrderComponent';
 import Types from './components/dashboard/TypesComponent';
 import Home from "./pages/Home";
+import Product from "./pages/Product";
 import LoginAdmin from "./Admin/LoginAdmin";
 import LoginUser from "./users/LoginUser";
 import Register from "./users/Register";
@@ -30,6 +31,7 @@ function App() {
             <Route path='/orders' exact element={<Order />} />
             <Route path='/types' exact element={<Types />} />
             <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />} />
             <Route path="/admin/Login" element={<LoginAdmin />} />
             <Route path="/Login" element={<LoginUser />} />
             <Route path="/Register" element={<Register />} />

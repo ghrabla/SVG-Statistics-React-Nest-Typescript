@@ -4,7 +4,6 @@ import Sidebar from "./sidebar";
 import Statistics from "./statistics";
 import Swal from 'sweetalert2';
 
-
 const DashboardComponent = () => {
     const [allcars,setallcars] = useState([])
 
