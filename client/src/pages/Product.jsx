@@ -12,7 +12,7 @@ export default function App() {
     });
   }, []);
 
-  if (!post) return null;
+  if (!product) return null;
 
     return (
         <>
