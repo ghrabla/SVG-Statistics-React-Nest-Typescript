@@ -1,18 +1,17 @@
 import React ,{ useEffect, useState } from "react";
 import NavBar from '../components/NavBar';
 import axios from "axios";
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+const baseURL = "http://localhost:9000/cars";
 
 export default function App() {
     const [product,setproduct] = useState([])
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios.get(baseURL).then((response) => {
         setproduct(response.data);
     });
   }, []);
 
-  if (!post) return null;
 
     return (
         <>
