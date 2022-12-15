@@ -8,7 +8,7 @@ export default function App() {
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
-      setPost(response.data);
+        setproduct(response.data);
     });
   }, []);
 
