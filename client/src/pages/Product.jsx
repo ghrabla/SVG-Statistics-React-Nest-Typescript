@@ -6,13 +6,12 @@ const baseURL = "http://localhost:9000/cars/";
 export default function App() {
   const [product,setproduct] = useState([])
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios.get(baseURL).then((response) => {
         setproduct(response.data);
     });
   }, []);
 
-  if (!product) return null;
 
     return (
         <>
@@ -27,6 +26,7 @@ export default function App() {
                         <div className="mx-2 w-72 lg:mb-0 mb-8">
                             <div>
                                 <img src="'http://localhost/svg-statistics-react-best-typescript/backend/images/' + {index.image}" className="w-full h-44" />
+                                <img src={index.image} className="w-full h-44" />
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
@@ -61,10 +61,11 @@ export default function App() {
                                 </div>
                             </div>
                         </div>
+
                         {/* Card 1 Ends */}
                         </div>
+                    </div>
                 </div>
-            </div>
             ))}
         </>
     );
