@@ -31,7 +31,7 @@ export default function App() {
                             <div>
                                 <img src="http://www.maghreb-rechange.com/wp-content/uploads/2022/05/namx-600x400.jpg" className="w-full h-44 rounded" />
                             </div>
-                            <div className="bg-white">
+                            <div className="bg-white rounded">
                                 <div className="flex items-center justify-between px-4 pt-4">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bookmark" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -61,7 +61,7 @@ export default function App() {
                                     </div>
                                     <div className="flex items-center justify-between py-4">
                                         <h2 className="text-indigo-700 text-xs font-semibold">Bay Youcode , Safi Morocco</h2>
-                                        <h3 className="text-indigo-700 text-xl font-semibold">{index.price}</h3>
+                                        <h3 className="text-indigo-700 text-xl font-semibold">${index.price}</h3>
                                     </div>
                                 </div>
                             </div>
