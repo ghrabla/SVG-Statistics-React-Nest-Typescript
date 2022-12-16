@@ -55,7 +55,7 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-700  md:border-0  md:p-0 dark:text-gray-400"><i class="fa-solid fa-cart-shopping"></i> Panier</a>
+          <a href="/cart" class="block py-2 px-3 text-white rounded hover:bg-gray-700  md:border-0  md:p-0 dark:text-gray-400"><i class="fa-solid fa-cart-shopping"></i> Panier</a>
         </li>
       </ul>
     </div>

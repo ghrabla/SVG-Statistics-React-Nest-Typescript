@@ -14,6 +14,7 @@ import LoginAdmin from "./Admin/LoginAdmin";
 import LoginUser from "./users/LoginUser";
 import Register from "./users/Register";
 import Details from "./pages/details";
+import Cart from "./pages/Cart";
 
 
 
@@ -32,10 +33,11 @@ function App() {
             <Route path='/types' exact element={<Types />} />
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/admin/Login" element={<LoginAdmin />} />
             <Route path="/Login" element={<LoginUser />} />
             <Route path="/Register" element={<Register />} />
-            {/* <Route path="/details/:id" element={<Details />} /> */} 
+            <Route path="/cart" element={<Cart />} /> 
             <Route path="/details" element={<Details />} />
           </Routes>
           <ToastContainer/>
