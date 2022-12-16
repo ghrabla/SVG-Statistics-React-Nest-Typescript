@@ -124,7 +124,7 @@ const Product4 = () => {
                         backgroundrepeat: "no-repeat",
                         backgroundSize: "cover",
                         border: "1px solid #aaa",
-
+                       
                     }} >
                         <color attach="background" args={["#101010"]} />
                         <PresentationControls speed={3} global zoom={.5} polar={[-0.1, Math.PI / 4]}>

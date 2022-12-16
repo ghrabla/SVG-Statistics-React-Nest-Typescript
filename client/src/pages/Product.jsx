@@ -1,7 +1,9 @@
 import React ,{ useEffect, useState } from "react";
 import NavBar from '../components/NavBar';
 import axios from "axios";
+import { Link } from "react-router-dom";
 const baseURL = "http://localhost:9000/cars";
+
 
 export default function App() {
     const [product,setproduct] = useState([])
@@ -15,18 +17,19 @@ export default function App() {
 
     return (
         <>
-      <NavBar />
-      <br/><br/><br/>
-      hdhdhdhdh
+        <div className="pb-20">
+          <NavBar />
+        </div>
+      <div className="flex flex-wrap justify-center bg-gray-100">
       {product.map((index)=>(
-            <div className="bg-gray-100" key={index._id}>
+            <div className="bg-gray-100 " key={index._id}>
                 {/* Remove py-8 */}
-                <div className="mx-auto container py-8">
-                    <div className="flex flex-wrap items-center lg:justify-between justify-center">
+                <div className="mx-auto container py-3">
+                    <div className="">
                         {/* Card 1 */}
-                        <div className="mx-2 w-72 lg:mb-0 mb-8">
+                        <div className="mx-2 w-72 lg:mb-0 mb-8 rounded">
                             <div>
-                                <img src={index.image} className="w-full h-44" />
+                                <img src="http://www.maghreb-rechange.com/wp-content/uploads/2022/05/namx-600x400.jpg" className="w-full h-44 rounded" />
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
@@ -36,9 +39,11 @@ export default function App() {
                                             <path d="M9 4h6a2 2 0 0 1 2 2v14l-5-3l-5 3v-14a2 2 0 0 1 2 -2" />
                                         </svg>
                                     </div>
-                                    <div className="inline-block bg-[#14532D] py-1.5 px-9  rounded">
+                                    <Link path="details" to="/details">
+                                    <div className="inline-block bg-[#14532D] py-1.5 px-9 cursor-pointer rounded" >
                                         <p className="text-xm text-[#ffff]">Plus Details</p>
                                     </div>
+                                    </Link>
                                 </div>
                                 <div className="p-4">
                                     <div className="flex items-center">
@@ -65,6 +70,7 @@ export default function App() {
                 </div>
             </div>
             ))}
+            </div>
         </>
     );
 }
