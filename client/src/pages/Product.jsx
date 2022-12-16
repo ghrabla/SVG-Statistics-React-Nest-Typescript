@@ -25,7 +25,6 @@ export default function App() {
                         {/* Card 1 */}
                         <div className="mx-2 w-72 lg:mb-0 mb-8">
                             <div>
-                                <img src="'http://localhost/svg-statistics-react-best-typescript/backend/images/' + {index.image}" className="w-full h-44" />
                                 <img src={index.image} className="w-full h-44" />
                             </div>
                             <div className="bg-white">
