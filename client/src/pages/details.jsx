@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
 function Model(props) {
-    const { scene } = useGLTF('2.glb');
+    const { scene } = useGLTF('5.glb');
     return <primitive object={scene}  {...props} />;
 }
 
@@ -27,11 +27,11 @@ const Product4 = () => {
         <div>
             <NavBar />
 
-            <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
+            <div className="2xl:container 2xl:mx-auto lg:px-20 md:py-12 md:px-6 px-4 ">
                 <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
                     {/* <!-- Description Div --> */}
 
-                    <div className="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center mt-20">
+                    <div className="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center ">
                         <p className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600">NAMEX CARS</p>
                         <h2 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">NAMEX HUV 5008</h2>
 
@@ -119,16 +119,16 @@ const Product4 = () => {
                     </div>
                 </div> */}
                     <Canvas dpr={[1, 2]} shadows camera={{ fov: 4 }} style={{
-                        width: "100%",
-                        height: "920px",
-                        backgroundImage:
-                            "url()",
+                        width: "90%",
+                        height: "520px",
                         backgroundrepeat: "no-repeat",
                         backgroundSize: "cover",
+                        border: "1px solid #aaa",
+
                     }} >
-                        {/* <color attach="background" args={["#101010"]} /> */}
-                        <PresentationControls speed={1.5} global zoom={.5} polar={[-0.1, Math.PI / 4]}>
-                            <Stage environment={null} >
+                        <color attach="background" args={["#101010"]} />
+                        <PresentationControls speed={3} global zoom={.5} polar={[-0.1, Math.PI / 4]}>
+                            <Stage environment={"night"}>
                                 <Model scale={0.01} />
                             </Stage>
                         </PresentationControls>

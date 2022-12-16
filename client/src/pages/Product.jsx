@@ -17,6 +17,7 @@ export default function App() {
         <>
       <NavBar />
       <br/><br/><br/>
+      hdhdhdhdh
       {product.map((index)=>(
             <div className="bg-gray-100" key={index._id}>
                 {/* Remove py-8 */}
@@ -25,7 +26,7 @@ export default function App() {
                         {/* Card 1 */}
                         <div className="mx-2 w-72 lg:mb-0 mb-8">
                             <div>
-                                <img src="'http://localhost/fill-rouge/backend/images/' + index.image" className="w-full h-44" />
+                                <img src={index.image} className="w-full h-44" />
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
@@ -60,8 +61,7 @@ export default function App() {
                                 </div>
                             </div>
                         </div>
-                        {/* Card 1 Ends */}
-                                            </div>
+                    </div>
                 </div>
             </div>
             ))}
