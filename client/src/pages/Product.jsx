@@ -1,10 +1,10 @@
 import React ,{ useEffect, useState } from "react";
 import NavBar from '../components/NavBar';
 import axios from "axios";
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+const baseURL = "http://localhost:9000/cars/";
 
 export default function App() {
-    const [product,setproduct] = useState([])
+  const [product,setproduct] = useState([])
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -22,11 +22,11 @@ export default function App() {
             <div className="bg-gray-100" key={index._id}>
                 {/* Remove py-8 */}
                 <div className="mx-auto container py-8">
-                    <div className="flex flex-wrap items-center lg:justify-between justify-center">
+                    <div className="flex flex-nowrap items-center lg:justify-between justify-center">
                         {/* Card 1 */}
                         <div className="mx-2 w-72 lg:mb-0 mb-8">
                             <div>
-                                <img src="'http://localhost/fill-rouge/backend/images/' + index.image" className="w-full h-44" />
+                                <img src="'http://localhost/svg-statistics-react-best-typescript/backend/images/' + {index.image}" className="w-full h-44" />
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
@@ -62,7 +62,7 @@ export default function App() {
                             </div>
                         </div>
                         {/* Card 1 Ends */}
-                                            </div>
+                        </div>
                 </div>
             </div>
             ))}
