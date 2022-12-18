@@ -34,16 +34,10 @@ const Product4 = () => {
       <div className="2xl:container 2xl:mx-auto lg:px-20 md:py-12 md:px-6 px-4 ">
         <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
           <div className="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center ">
-            <p className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600">
-              NAMEX CARS
-            </p>
-            <h2 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">
-              NAMEX HUV 5008
-            </h2>
       <select
         onChange={onChange}
         id="countries"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-pointer"
+        class="bg-gray-50 mt-20 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-pointer"
       >
         <option selected disabled>Choose a view</option>
         <option value="sunset">sunset</option>
@@ -57,6 +51,9 @@ const Product4 = () => {
         <option value="studio">studio</option>
         <option value="park">park</option> 
       </select>
+            <h2 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">
+              NAMEX HUV 5008
+            </h2>
             <div className=" flex flex-row justify-between  mt-5">
               <div className=" flex flex-row space-x-3">
                 <svg
