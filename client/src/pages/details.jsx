@@ -25,7 +25,7 @@ const Product4 = () => {
 
   const onChange = (e)=>{
    setStyle(e.target.value)
-   console.log(style)
+  //  console.log(style)
   }
   
   return (

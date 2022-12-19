@@ -1,9 +1,12 @@
 import React from "react";
 import Sidebar from "./sidebar";
 import Statistics from "./statistics";
-
+import {getorders} from "../../methods/method";
 
 const OrderComponent = () => {
+    Promise.resolve({
+    getorders
+    })
     return (
     <div className="flex bg-gray-100">
          <Sidebar/>
@@ -90,7 +93,7 @@ const OrderComponent = () => {
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                         <div class="flex items-center space-x-4 text-sm">
-                                            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-edit mt-1"></i>  Edit</button>
+                                            <button class="bg-green-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-edit mt-1"></i>  Edit</button>
                                             <button class="bg-red-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer flex"><i class="fas fa-trash mt-1"></i>  Delete</button>
                                         </div>
                                     </td>

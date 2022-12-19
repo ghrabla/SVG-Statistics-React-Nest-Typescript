@@ -9,10 +9,17 @@ const Statistics = ({allcars,setallcars})=>{
     const [types,settypes] = useState([])
      
     useEffect(()=>{
-        Promise.resolve(getcars()).then((res)=>{
+        Promise.resolve(
+            getcars()).then((res)=>{
             console.log(res)
             setcars(res)
             setallcars(res)
+        })
+        Promise.resolve(
+            getorders()).then((res)=>{
+            console.log(res)
+            setorders(res)
+            setorders(res)
         })
         // console.log(getcars()) 
         // const necars = 
